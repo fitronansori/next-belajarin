@@ -17,6 +17,7 @@ const PopularCourseCard = () => {
             src={"/assets/images/placeholder.webp"}
             alt=""
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="size-auto object-cover brightness-75 rounded-t-xl lg:rounded-md transition duration-200 group-hover:brightness-90"
           />
         </CardHeader>
