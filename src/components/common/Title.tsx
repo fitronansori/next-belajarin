@@ -5,6 +5,7 @@ type TitleProps = {
   description?: string;
   className?: string;
   classNameTitle?: string;
+  classNameDescription?: string;
 };
 
 const Title = ({
@@ -12,12 +13,17 @@ const Title = ({
   description,
   className,
   classNameTitle,
+  classNameDescription,
 }: TitleProps) => {
   return (
-    <div className={cn("", className)}>
+    <div className={cn("space-y-2", className)}>
       <h1 className={cn("text-xl font-bold", classNameTitle)}>{title}</h1>
 
-      {description && <p className="">{description}</p>}
+      {description && (
+        <p className={cn("w-full max-w-[580px]", classNameDescription)}>
+          {description}
+        </p>
+      )}
     </div>
   );
 };
