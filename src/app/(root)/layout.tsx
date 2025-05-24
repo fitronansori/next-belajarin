@@ -1,8 +1,12 @@
+import Footer from "@/components/layouts/Footer";
+import Header from "@/components/layouts/Header";
+
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <div className="h-16">Header</div>
+      <Header />
       <main>{children}</main>
+      <Footer />
     </>
   );
 };
