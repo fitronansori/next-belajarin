@@ -37,7 +37,10 @@ export async function POST(req: Request) {
           username: username,
           email: email_addresses[0].email_address,
           imageUrl: image_url || "",
-          role: public_metadata.role || "user",
+          role:
+            typeof public_metadata.role === "string"
+              ? public_metadata.role
+              : undefined,
         },
       });
     }
