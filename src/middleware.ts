@@ -2,11 +2,20 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
 const isAdminRoute = createRouteMatcher(["/dashboard"]);
+const isTeacherRoute = createRouteMatcher(["/dashboard/teacher"]);
 
 export default clerkMiddleware(async (auth, req) => {
   if (
     isAdminRoute(req) &&
     (await auth()).sessionClaims?.metadata?.role !== "admin"
+  ) {
+    const url = new URL("/", req.url);
+    return NextResponse.redirect(url);
+  }
+
+  if (
+    isTeacherRoute(req) &&
+    (await auth()).sessionClaims?.metadata?.role !== "teacher"
   ) {
     const url = new URL("/", req.url);
     return NextResponse.redirect(url);
