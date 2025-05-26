@@ -19,7 +19,7 @@ const choose_us_data = [
     icon: <BookMarkedIcon className="size-5 text-white" />,
     title: "Sertifikat",
     description:
-      "Dapatkan sertifikat resmi setelah menyelesaikan kursus, buktikan keahlianmu.",
+      "Dapatkan sertifikat resmi setelah menyelesaikan kelas, buktikan keahlianmu.",
   },
 ];
 
@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
       <div className="container space-y-4">
         <Title
           title="🤷‍♀️ Kenapa Memilih Kami?"
-          description="Platform kami menawarkan berbagai kursus yang diajarkan oleh para ahli industri."
+          description="Platform kami menawarkan berbagai kelas yang diajarkan oleh para ahli industri."
           classNameDescription="text-sm"
         />
 

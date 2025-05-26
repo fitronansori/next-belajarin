@@ -13,7 +13,7 @@ const SearchCourse = ({ className }: SearchCourseProps) => {
         <SearchIcon className="h-5 w-5 text-muted-foreground" />
         <Input
           type="text"
-          placeholder="Cari kursus..."
+          placeholder="Cari kelas..."
           className="border-0 focus-visible:ring-0 shadow-none"
         />
       </div>

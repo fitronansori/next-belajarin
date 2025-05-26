@@ -20,12 +20,12 @@ const Hero = () => {
             </h1>
 
             <p className="text-sm md:text-base max-w-[550px]">
-              Jelajahi berbagai kursus yang diajarkan oleh para ahli industri.
+              Jelajahi berbagai kelas yang diajarkan oleh para ahli industri.
               Belajar sesuai kemampuanmu dan capai tujuanmu.
             </p>
 
             <Button size={"lg"} asChild>
-              <Link href={"/courses"}>Jelajahi Kursus</Link>
+              <Link href={"/courses"}>Jelajahi kelas</Link>
             </Button>
           </div>
         </div>

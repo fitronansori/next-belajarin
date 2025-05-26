@@ -6,7 +6,7 @@ export const nav_links = [
   },
   {
     id: 2,
-    title: "Kursus",
+    title: "Kelas",
     href: "/courses",
   },
   {
