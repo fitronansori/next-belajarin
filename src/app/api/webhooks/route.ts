@@ -27,7 +27,6 @@ export async function POST(req: Request) {
         last_name,
         username,
         image_url,
-        public_metadata,
       } = event.data;
 
       await prisma.user.create({
@@ -37,7 +36,6 @@ export async function POST(req: Request) {
           username: username,
           email: email_addresses[0].email_address,
           imageUrl: image_url || "",
-          role: public_metadata.role || "user",
         },
       });
     }
@@ -50,7 +48,6 @@ export async function POST(req: Request) {
         last_name,
         username,
         image_url,
-        public_metadata,
       } = event.data;
 
       await prisma.user.update({
@@ -60,7 +57,6 @@ export async function POST(req: Request) {
           username: username,
           email: email_addresses[0].email_address,
           imageUrl: image_url || "",
-          role: public_metadata.role || "user",
         },
       });
     }
