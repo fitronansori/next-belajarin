@@ -5,9 +5,12 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import UserAvatar from "./UserAvatar";
 import MobileMenu from "./MobileMenu";
+import { currentUser } from "@clerk/nextjs/server";
 
-const Header = () => {
-  const login = false;
+const Header = async () => {
+  const user = await currentUser();
+
+  console.log("Header user", user);
 
   return (
     <header className="border-b">
@@ -21,8 +24,11 @@ const Header = () => {
         <div className="flex items-center gap-4">
           <SearchCourse className="hidden lg:block" />
 
-          {login ? (
-            <UserAvatar />
+          {user ? (
+            <UserAvatar
+              name={`${user.firstName} ${user.lastName}`}
+              image={user.imageUrl}
+            />
           ) : (
             <Button asChild>
               <Link href={"/login"}>Login</Link>

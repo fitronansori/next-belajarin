@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const lexendSans = Lexend({
   subsets: ["latin"],
@@ -20,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body className={cn("antialiased", lexendSans.variable)}>{children}</body>
+      <ClerkProvider>
+        <body className={cn("antialiased", lexendSans.variable)}>
+          {children}
+        </body>
+      </ClerkProvider>
     </html>
   );
 }
