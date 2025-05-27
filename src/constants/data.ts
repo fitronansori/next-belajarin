@@ -11,8 +11,8 @@ export const nav_links = [
   },
   {
     id: 3,
-    title: "Instruktur",
-    href: "/instructors",
+    title: "mentor",
+    href: "/mentors",
   },
 ];
 
