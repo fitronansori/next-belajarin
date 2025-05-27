@@ -96,3 +96,24 @@ export const dashboardStudentItems = [
     icon: User,
   },
 ];
+
+export const filter_options = {
+  category: [
+    { _value: "all", _label: "Semua Kategori" },
+    { _value: "web", _label: "Web Development" },
+    { _value: "mobile", _label: "Mobile Development" },
+    { _value: "design", _label: "UI/UX Design" },
+    { _value: "data", _label: "Data Science" },
+  ],
+  level: [
+    { _value: "all", _label: "Semua Level" },
+    { _value: "beginner", _label: "Beginner" },
+    { _value: "intermediate", _label: "Intermediate" },
+    { _value: "advanced", _label: "Advanced" },
+  ],
+  price: [
+    { _value: "all", _label: "Semua Harga" },
+    { _value: "free", _label: "Gratis" },
+    { _value: "paid", _label: "Berbayar" },
+  ],
+};
