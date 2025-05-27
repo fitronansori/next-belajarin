@@ -26,10 +26,11 @@ const Header = async () => {
             <UserAvatar
               name={`${user.firstName} ${user.lastName}`}
               image={user.imageUrl}
+              role={user.publicMetadata?.role as string}
             />
           ) : (
             <Button asChild>
-              <Link href={"/login"}>Login</Link>
+              <Link href={"/sign-in"}>Login</Link>
             </Button>
           )}
 
